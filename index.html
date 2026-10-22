@@ -7,15 +7,15 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nuestra Primera Comunión Regina Y Ricardo 🕊️">
     <meta property="og:description" content="Te invitamos a celebrar con nosotros este día tan especial.">
-    <meta property="og:image" content="https://regina1503.github.io/Primera-Comuni-n-Aranza-Ricardo/miniatura-comunion.jpg">
-    <meta property="og:image:secure_url" content="https://regina1503.github.io/Primera-Comuni-n-Aranza-Ricardo/miniatura-comunion.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/miniatura.jpg">
+    <meta property="og:image:secure_url" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/miniatura.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="600">
     <meta property="og:image:alt" content="Invitación Primera Comunión">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nuestra Primera Comunión Regina Y Ricardo 🕊️">
-    <meta name="twitter:image" content="https://regina1503.github.io/Primera-Comuni-n-Aranza-Ricardo/miniatura-comunion.jpg">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/miniatura.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -74,7 +74,7 @@
             animation: pulse-subtle 2s infinite ease-in-out;
         }
 
-                        /* Opciones Sí / No de la ventana de confirmación */
+        /* Opciones Sí / No de la ventana de confirmación */
         .rsvp-opt {
             background: #ffffff;
             border: 2px solid #d9c6a3;
@@ -147,14 +147,14 @@
         <section id="page2" class="page">
             <div id="frame2" class="frame">
                 <!-- Botón de ubicación -->
-            <div class="absolute bottom-[55%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-[10.8rem] text-center z-10">
-                <a href="https://www.google.com/maps/place/Convenciones+y+Catering+Cantabria/@19.6753884,-101.2048473,17z/data=!3m1!4b1!4m6!3m5!1s0x842d0dce84c55a8b:0xfef3693d6440c3e8!8m2!3d19.6753884!4d-101.2022724!16s%2Fg%2F11c6rj88l4!18m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" 
-                   class="btn-location inline-flex items-center justify-center gap-[0.64rem] w-full py-[0.55rem] px-[1rem] rounded-full font-sans font-semibold text-[0.744rem] tracking-wider uppercase">
-                    <i class="fa-solid fa-map-pin text-[0.956rem]"></i>
-                    <span>Ver Ubicación</span>
-                </a>
-            </div>
-                            <!-- Botón de confirmación -->
+                <div class="absolute bottom-[55%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-[10.8rem] text-center z-10">
+                    <a href="https://www.google.com/maps/place/Convenciones+y+Catering+Cantabria/@19.6753884,-101.2048473,17z/data=!3m1!4b1!4m6!3m5!1s0x842d0dce84c55a8b:0xfef3693d6440c3e8!8m2!3d19.6753884!4d-101.2022724!16s%2Fg%2F11c6rj88l4!18m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" 
+                       class="btn-location inline-flex items-center justify-center gap-[0.64rem] w-full py-[0.55rem] px-[1rem] rounded-full font-sans font-semibold text-[0.744rem] tracking-wider uppercase">
+                        <i class="fa-solid fa-map-pin text-[0.956rem]"></i>
+                        <span>Ver Ubicación</span>
+                    </a>
+                </div>
+                <!-- Botón de confirmación -->
                 <div class="absolute bottom-[20%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-[11.5rem] text-center z-10">
                     <button type="button" onclick="openRsvp()"
                        class="btn-location cursor-pointer flex flex-col items-center justify-center w-full py-[0.7rem] px-[1.275rem] rounded-full font-sans font-semibold text-[0.744rem] leading-snug tracking-wider uppercase whitespace-nowrap">
@@ -184,22 +184,6 @@
             <div class="grid grid-cols-2 gap-3 mb-4">
                 <button type="button" id="optYes" onclick="setAttend('si')" class="rsvp-opt rounded-xl px-2 py-3 text-sm font-semibold">✅ Sí, ahí estaré</button>
                 <button type="button" id="optNo" onclick="setAttend('no')" class="rsvp-opt rounded-xl px-2 py-3 text-sm font-semibold">😢 No podré ir</button>
-            </div>
-
-            <div id="guestsBlock" class="hidden mb-4">
-                <label class="block text-sm font-semibold mb-1" style="color:#6b5532;" for="rsvpGuests">Número de personas 👨‍👩‍👧‍👦</label>
-                <select id="rsvpGuests" class="w-full rounded-xl px-4 py-3 text-base outline-none" style="border:2px solid #d9c6a3; background:#fff; color:#3a2d18;">
-                    <option value="1">1 persona</option>
-                    <option value="2">2 personas</option>
-                    <option value="3">3 personas</option>
-                    <option value="4">4 personas</option>
-                    <option value="5">5 personas</option>
-                    <option value="6">6 personas</option>
-                    <option value="7">7 personas</option>
-                    <option value="8">8 personas</option>
-                    <option value="9">9 personas</option>
-                    <option value="10">10 personas</option>
-                </select>
             </div>
 
             <p id="rsvpError" class="hidden text-sm text-center mb-3" style="color:#b3392b;"></p>
@@ -232,7 +216,6 @@
             rsvpAttend = value;
             document.getElementById('optYes').classList.toggle('selected', value === 'si');
             document.getElementById('optNo').classList.toggle('selected', value === 'no');
-            document.getElementById('guestsBlock').classList.toggle('hidden', value !== 'si');
             document.getElementById('rsvpError').classList.add('hidden');
         }
 
@@ -249,11 +232,8 @@
 
             let msg;
             if (rsvpAttend === 'si') {
-                const n = parseInt(document.getElementById('rsvpGuests').value, 10);
-                const personas = n === 1 ? '1 persona' : n + ' personas';
                 msg = '¡Hola! 👋 Soy *' + name + '*.\n' +
                       '✅ Confirmo mi asistencia a la Primera Comunión ⛪🕊️\n' +
-                      '👨‍👩‍👧‍👦 Asistiremos: ' + personas + '\n' +
                       '🎉 ¡Gracias por la invitación!';
             } else {
                 msg = '¡Hola! 👋 Soy *' + name + '*.\n' +
