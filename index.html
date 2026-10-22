@@ -7,11 +7,14 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nuestra Primera Comunión Regina Y Ricardo 🕊️">
     <meta property="og:description" content="Te invitamos a celebrar con nosotros este día tan especial.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/PPC.jpg">
+    <meta property="og:image" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/miniatura.jpg">
+    <meta property="og:image:type" content="image/jpeg">
+    <meta property="og:image:width" content="600">
+    <meta property="og:image:height" content="600">
     <meta property="og:image:alt" content="Invitación Primera Comunión">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nuestra Primera Comunión Regina Y Ricardo 🕊️">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/PPC.jpg">
+    <meta name="twitter:image" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/miniatura.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -70,12 +73,11 @@
             animation: pulse-subtle 2s infinite ease-in-out;
         }
 
-        /* Glassmorphism styling for location buttons */
+        /* Location buttons */
         .btn-location {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(8px);
+            background: #977846;
             border: 2px solid #977846;
-            color: #977846;
+            color: #ffffff;
             box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
             transition: all 0.3s ease;
         }
@@ -88,10 +90,6 @@
         }
 
         .btn-location i {
-            color: #977846;
-        }
-
-        .btn-location:hover i {
             color: #ffffff;
         }
 
@@ -105,21 +103,6 @@
         ::-webkit-scrollbar-thumb {
             background: rgba(212, 175, 55, 0.5);
             border-radius: 3px;
-        }
-
-        /* Countdown timer styles */
-        .countdown-container {
-            background: transparent;
-            color: #977846;
-        }
-
-        .countdown-box {
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            border: 2px solid #977846;
-            background: transparent;
-            justify-content: center;
         }
     </style>
 </head>
@@ -146,129 +129,34 @@
         <section id="page3" class="page">
             
             <!-- Botón de ubicación (Subido 15% adicional desde el centro) -->
-            <div class="absolute top-[35%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-xs text-center z-10">
+            <div class="absolute top-[39%] left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-11/12 max-w-[17rem] text-center z-10">
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" 
-                   class="btn-location btn-pulse inline-flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-full font-sans font-semibold text-sm tracking-wider uppercase">
-                    <i class="fa-solid fa-location-dot text-lg"></i>
+                   class="btn-location btn-pulse inline-flex items-center justify-center gap-[0.64rem] w-full py-[0.75rem] px-[1.275rem] rounded-full font-sans font-semibold text-[0.744rem] tracking-wider uppercase">
+                    <i class="fa-solid fa-location-dot text-[0.956rem]"></i>
                     <span>Ver Ubicación</span>
                 </a>
             </div>
 
             <!-- Botón de ubicación (Subido 10% adicional desde la parte inferior) -->
-            <div class="absolute bottom-[24%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-xs text-center z-10">
+            <div class="absolute bottom-[12%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-[17rem] text-center z-10">
                 <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" 
-                   class="btn-location inline-flex items-center justify-center gap-3 w-full py-3.5 px-6 rounded-full font-sans font-semibold text-sm tracking-wider uppercase">
-                    <i class="fa-solid fa-map-pin text-lg"></i>
+                   class="btn-location inline-flex items-center justify-center gap-[0.64rem] w-full py-[0.75rem] px-[1.275rem] rounded-full font-sans font-semibold text-[0.744rem] tracking-wider uppercase">
+                    <i class="fa-solid fa-map-pin text-[0.956rem]"></i>
                     <span>Ver Ubicación</span>
                 </a>
             </div>
 
-            <!-- Cuenta regresiva al final de la última página -->
-            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 w-11/12 max-w-xs z-10">
-                <div class="countdown-container text-center">
-                    <p class="text-lg italic mb-2" style="font-family: Georgia, serif;">Faltan</p>
-                    <div class="flex justify-center items-center gap-3 font-sans">
-                        <div class="countdown-box flex flex-col items-center">
-                            <span id="cd-days" class="text-lg font-bold leading-none">00</span>
-                            <span class="text-[9px] uppercase tracking-wider">Días</span>
-                        </div>
-                        <div class="countdown-box flex flex-col items-center">
-                            <span id="cd-hours" class="text-lg font-bold leading-none">00</span>
-                            <span class="text-[9px] uppercase tracking-wider">Hrs</span>
-                        </div>
-                        <div class="countdown-box flex flex-col items-center">
-                            <span id="cd-minutes" class="text-lg font-bold leading-none">00</span>
-                            <span class="text-[9px] uppercase tracking-wider">Min</span>
-                        </div>
-                        <div class="countdown-box flex flex-col items-center">
-                            <span id="cd-seconds" class="text-lg font-bold leading-none">00</span>
-                            <span class="text-[9px] uppercase tracking-wider">Seg</span>
-                        </div>
-                    </div>
-                </div>
+            <!-- Mensaje final -->
+            <div class="absolute bottom-[4%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-xs z-10 text-center">
+                <p class="text-2xl italic" style="font-family: Georgia, serif; color: #977846;">¡No Faltes!</p>
             </div>
 
         </section>
 
     </div>
 
-    <!-- Navigation Indicator Dots -->
-    <div class="fixed right-4 top-1/2 transform -translate-y-1/2 flex flex-col gap-3 z-20">
-        <button onclick="scrollToPage(1)" id="dot1" class="w-3 h-3 rounded-full bg-[#977846] transition-all duration-300 opacity-80 hover:opacity-100" aria-label="Página 1"></button>
-        <button onclick="scrollToPage(2)" id="dot2" class="w-3 h-3 rounded-full bg-gray-400 transition-all duration-300 opacity-50 hover:opacity-100" aria-label="Página 2"></button>
-        <button onclick="scrollToPage(3)" id="dot3" class="w-3 h-3 rounded-full bg-gray-400 transition-all duration-300 opacity-50 hover:opacity-100" aria-label="Página 3"></button>
-    </div>
-
     <script>
         const container = document.getElementById('scrollContainer');
-        const dots = [document.getElementById('dot1'), document.getElementById('dot2'), document.getElementById('dot3')];
-
-        function scrollToPage(pageNumber) {
-            const page = document.getElementById(`page${pageNumber}`);
-            if (page) {
-                page.scrollIntoView({ behavior: 'smooth' });
-            }
-        }
-
-        // Active page indicator update on scroll
-        container.addEventListener('scroll', () => {
-            const pageHeight = window.innerHeight;
-            const scrollPosition = container.scrollTop;
-            const currentPage = Math.round(scrollPosition / pageHeight);
-
-            dots.forEach((dot, index) => {
-                if (index === currentPage) {
-                    dot.classList.remove('bg-gray-400', 'opacity-50');
-                    dot.classList.add('bg-[#977846]', 'opacity-100', 'scale-125');
-                } else {
-                    dot.classList.remove('bg-[#977846]', 'opacity-100', 'scale-125');
-                    dot.classList.add('bg-gray-400', 'opacity-50');
-                }
-            });
-        });
-
-        // Cuenta regresiva al 13 de Diciembre a las 12:00 PM
-        function startCountdown() {
-            // Target date: December 13th, 12:00:00 PM
-            const now = new Date();
-            let targetYear = now.getFullYear();
-            let targetDate = new Date(`December 13, ${targetYear} 12:00:00`);
-
-            // If December 13th 12 PM has already passed this year, count to next year's December 13th
-            if (now > targetDate) {
-                targetDate = new Date(`December 13, ${targetYear + 1} 12:00:00`);
-            }
-
-            function updateTimer() {
-                const currentTime = new Date().getTime();
-                const difference = targetDate.getTime() - currentTime;
-
-                if (difference <= 0) {
-                    document.getElementById('cd-days').innerText = "00";
-                    document.getElementById('cd-hours').innerText = "00";
-                    document.getElementById('cd-minutes').innerText = "00";
-                    document.getElementById('cd-seconds').innerText = "00";
-                    return;
-                }
-
-                const days = Math.floor(difference / (1000 * 60 * 60 * 24));
-                const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-                const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
-                const seconds = Math.floor((difference % (1000 * 60)) / 1000);
-
-                document.getElementById('cd-days').innerText = String(days).padStart(2, '0');
-                document.getElementById('cd-hours').innerText = String(hours).padStart(2, '0');
-                document.getElementById('cd-minutes').innerText = String(minutes).padStart(2, '0');
-                document.getElementById('cd-seconds').innerText = String(seconds).padStart(2, '0');
-            }
-
-            updateTimer();
-            setInterval(updateTimer, 1000);
-        }
-
-        window.onload = function() {
-            startCountdown();
-        };
     </script>
 </body>
 </html>
