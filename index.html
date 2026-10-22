@@ -7,14 +7,15 @@
     <meta property="og:type" content="website">
     <meta property="og:title" content="Nuestra Primera Comunión Regina Y Ricardo 🕊️">
     <meta property="og:description" content="Te invitamos a celebrar con nosotros este día tan especial.">
-    <meta property="og:image" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/miniatura.jpg">
+    <meta property="og:image" content="https://regina1503.github.io/Primera-Comuni-n-Aranza-Ricardo/miniatura-comunion.jpg">
+    <meta property="og:image:secure_url" content="https://regina1503.github.io/Primera-Comuni-n-Aranza-Ricardo/miniatura-comunion.jpg">
     <meta property="og:image:type" content="image/jpeg">
     <meta property="og:image:width" content="600">
     <meta property="og:image:height" content="600">
     <meta property="og:image:alt" content="Invitación Primera Comunión">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Nuestra Primera Comunión Regina Y Ricardo 🕊️">
-    <meta name="twitter:image" content="https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/miniatura.jpg">
+    <meta name="twitter:image" content="https://regina1503.github.io/Primera-Comuni-n-Aranza-Ricardo/miniatura-comunion.jpg">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -31,36 +32,36 @@
         .invitation-container {
             width: 100%;
             height: 100vh;
+            height: 100dvh;
             overflow-y: scroll;
-            scroll-snap-type: y mandatory;
             scroll-behavior: smooth;
+            background: #efe6e1;
         }
 
         .page {
             width: 100%;
-            height: 100vh;
-            scroll-snap-align: start;
             position: relative;
-            background-size: cover;
-            background-repeat: no-repeat;
-            background-position: center center;
             display: flex;
-            flex-direction: column;
             justify-content: center;
-            align-items: center;
+        }
+
+        /* La imagen se muestra completa (sin recortar) y los elementos se posicionan sobre ella */
+        .frame {
+            position: relative;
+            width: min(100vw, calc(100vh * 0.6555));
+            width: min(100vw, calc(100dvh * 0.6555));
+            aspect-ratio: 839 / 1280;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
         }
 
         /* Background Image setup with raw image URLs from GitHub repository */
-        #page1 {
-            background-image: url('https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/PPC.jpg');
+        #frame1 {
+            background-image: url('https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/IMG-20261021-WA0040.jpg');
         }
 
-        #page2 {
-            background-image: url('https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/Agrega%20(1).jpg');
-        }
-
-        #page3 {
-            background-image: url('https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/Agrega%20(3).jpg');
+        #frame2 {
+            background-image: url('https://raw.githubusercontent.com/regina1503/Primera-Comuni-n-Aranza-Ricardo/main/IMG-20261021-WA0047.jpg');
         }
 
         /* Pulse animation for interactive buttons */
@@ -71,6 +72,33 @@
 
         .btn-pulse {
             animation: pulse-subtle 2s infinite ease-in-out;
+        }
+
+                        /* Opciones Sí / No de la ventana de confirmación */
+        .rsvp-opt {
+            background: #ffffff;
+            border: 2px solid #d9c6a3;
+            color: #6b5532;
+            transition: all 0.2s ease;
+        }
+
+        .rsvp-opt.selected {
+            background: #977846;
+            border-color: #977846;
+            color: #ffffff;
+        }
+
+        /* Manita que invita a pulsar el botón de confirmación */
+        @keyframes hand-tap {
+            0%, 100% { transform: translate(0, 0) scale(1); }
+            50% { transform: translate(-4px, -6px) scale(0.92); }
+        }
+
+        .hand-tap {
+            color: #ffffff;
+            filter: drop-shadow(0 0 2px rgba(60, 40, 15, 0.9)) drop-shadow(0 2px 3px rgba(0, 0, 0, 0.35));
+            animation: hand-tap 1.2s infinite ease-in-out;
+            pointer-events: none;
         }
 
         /* Location buttons */
@@ -112,42 +140,136 @@
         
         <!-- Página 1 -->
         <section id="page1" class="page">
-            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce text-yellow-700 opacity-75">
-                <span class="text-xs uppercase tracking-widest font-sans mb-1">Desliza hacia abajo</span>
-                <i class="fa-solid fa-chevron-down text-lg"></i>
-            </div>
+            <div id="frame1" class="frame"></div>
         </section>
 
         <!-- Página 2 -->
         <section id="page2" class="page">
-            <div class="absolute bottom-6 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce text-yellow-700 opacity-75">
-                <i class="fa-solid fa-chevron-down text-lg"></i>
-            </div>
-        </section>
-
-        <!-- Página 3 -->
-        <section id="page3" class="page">
-            
-            <!-- Botón de ubicación (Subido 10% adicional desde la parte inferior) -->
-            <div class="absolute bottom-[27%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-[12.28rem] text-center z-10">
+            <div id="frame2" class="frame">
+                <!-- Botón de ubicación -->
+            <div class="absolute bottom-[55%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-[10.8rem] text-center z-10">
                 <a href="https://www.google.com/maps/place/Convenciones+y+Catering+Cantabria/@19.6753884,-101.2048473,17z/data=!3m1!4b1!4m6!3m5!1s0x842d0dce84c55a8b:0xfef3693d6440c3e8!8m2!3d19.6753884!4d-101.2022724!16s%2Fg%2F11c6rj88l4!18m1!1e1?entry=ttu&amp;g_ep=EgoyMDI2MTAxOS4wIKXMDSoASAFQAw%3D%3D" target="_blank" rel="noopener noreferrer" 
-                   class="btn-location inline-flex items-center justify-center gap-[0.64rem] w-full py-[0.75rem] px-[1.275rem] rounded-full font-sans font-semibold text-[0.744rem] tracking-wider uppercase">
+                   class="btn-location inline-flex items-center justify-center gap-[0.64rem] w-full py-[0.55rem] px-[1rem] rounded-full font-sans font-semibold text-[0.744rem] tracking-wider uppercase">
                     <i class="fa-solid fa-map-pin text-[0.956rem]"></i>
                     <span>Ver Ubicación</span>
                 </a>
             </div>
-
-            <!-- Mensaje final -->
-            <div class="absolute bottom-[14%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-xs z-10 text-center">
-                <p class="text-5xl italic" style="font-family: Georgia, serif; color: #977846;">¡No Faltes!</p>
+                            <!-- Botón de confirmación -->
+                <div class="absolute bottom-[20%] left-1/2 transform -translate-x-1/2 w-11/12 max-w-[11.5rem] text-center z-10">
+                    <button type="button" onclick="openRsvp()"
+                       class="btn-location cursor-pointer flex flex-col items-center justify-center w-full py-[0.7rem] px-[1.275rem] rounded-full font-sans font-semibold text-[0.744rem] leading-snug tracking-wider uppercase whitespace-nowrap">
+                        <span>Confirma tu</span>
+                        <span>asistencia aquí</span>
+                    </button>
+                    <i class="fa-solid fa-hand-pointer hand-tap absolute text-2xl" style="right: 10%; bottom: -14px;"></i>
+                </div>
             </div>
-
         </section>
 
     </div>
 
+    <!-- Ventana de confirmación -->
+    <div id="rsvpModal" class="fixed inset-0 z-50 hidden items-center justify-center p-4" style="background: rgba(40, 28, 12, 0.55);" onclick="if(event.target===this) closeRsvp()">
+        <div class="relative w-full max-w-sm rounded-3xl p-6 font-sans" style="background:#faf5ee; border:2px solid #977846; max-height:92dvh; overflow-y:auto; box-shadow:0 20px 50px rgba(0,0,0,0.3);">
+            <button type="button" onclick="closeRsvp()" aria-label="Cerrar" class="absolute top-3 right-4 text-2xl leading-none" style="color:#977846;">&times;</button>
+
+            <h2 class="text-center italic text-3xl mb-1" style="font-family: Georgia, serif; color:#977846;">Confirma tu asistencia 💌</h2>
+            <p class="text-center text-sm mb-5" style="color:#6b5532;">Primera Comunión ⛪🕊️</p>
+
+            <label class="block text-sm font-semibold mb-1" style="color:#6b5532;" for="rsvpName">Escribe tu nombre ✍️</label>
+            <input id="rsvpName" type="text" maxlength="60" autocomplete="name" placeholder="Nombre y apellido"
+                   class="w-full rounded-xl px-4 py-3 mb-4 text-base outline-none" style="border:2px solid #d9c6a3; background:#fff; color:#3a2d18;">
+
+            <p class="text-sm font-semibold mb-2" style="color:#6b5532;">¿Asistirás? 🎉</p>
+            <div class="grid grid-cols-2 gap-3 mb-4">
+                <button type="button" id="optYes" onclick="setAttend('si')" class="rsvp-opt rounded-xl px-2 py-3 text-sm font-semibold">✅ Sí, ahí estaré</button>
+                <button type="button" id="optNo" onclick="setAttend('no')" class="rsvp-opt rounded-xl px-2 py-3 text-sm font-semibold">😢 No podré ir</button>
+            </div>
+
+            <div id="guestsBlock" class="hidden mb-4">
+                <label class="block text-sm font-semibold mb-1" style="color:#6b5532;" for="rsvpGuests">Número de personas 👨‍👩‍👧‍👦</label>
+                <select id="rsvpGuests" class="w-full rounded-xl px-4 py-3 text-base outline-none" style="border:2px solid #d9c6a3; background:#fff; color:#3a2d18;">
+                    <option value="1">1 persona</option>
+                    <option value="2">2 personas</option>
+                    <option value="3">3 personas</option>
+                    <option value="4">4 personas</option>
+                    <option value="5">5 personas</option>
+                    <option value="6">6 personas</option>
+                    <option value="7">7 personas</option>
+                    <option value="8">8 personas</option>
+                    <option value="9">9 personas</option>
+                    <option value="10">10 personas</option>
+                </select>
+            </div>
+
+            <p id="rsvpError" class="hidden text-sm text-center mb-3" style="color:#b3392b;"></p>
+
+            <button type="button" onclick="sendRsvp()" class="btn-location cursor-pointer w-full rounded-full py-3 font-semibold text-sm tracking-wider uppercase">
+                Enviar por WhatsApp 📲
+            </button>
+        </div>
+    </div>
+
     <script>
         const container = document.getElementById('scrollContainer');
+
+        const RSVP_PHONE = '524431990296';
+        let rsvpAttend = null;
+
+        function openRsvp() {
+            const m = document.getElementById('rsvpModal');
+            m.classList.remove('hidden');
+            m.classList.add('flex');
+        }
+
+        function closeRsvp() {
+            const m = document.getElementById('rsvpModal');
+            m.classList.add('hidden');
+            m.classList.remove('flex');
+        }
+
+        function setAttend(value) {
+            rsvpAttend = value;
+            document.getElementById('optYes').classList.toggle('selected', value === 'si');
+            document.getElementById('optNo').classList.toggle('selected', value === 'no');
+            document.getElementById('guestsBlock').classList.toggle('hidden', value !== 'si');
+            document.getElementById('rsvpError').classList.add('hidden');
+        }
+
+        function showRsvpError(text) {
+            const e = document.getElementById('rsvpError');
+            e.textContent = text;
+            e.classList.remove('hidden');
+        }
+
+        function sendRsvp() {
+            const name = document.getElementById('rsvpName').value.replace(/\*/g, '').trim();
+            if (!name) { showRsvpError('Por favor escribe tu nombre ✍️'); return; }
+            if (!rsvpAttend) { showRsvpError('Elige si asistirás o no 🎉'); return; }
+
+            let msg;
+            if (rsvpAttend === 'si') {
+                const n = parseInt(document.getElementById('rsvpGuests').value, 10);
+                const personas = n === 1 ? '1 persona' : n + ' personas';
+                msg = '¡Hola! 👋 Soy *' + name + '*.\n' +
+                      '✅ Confirmo mi asistencia a la Primera Comunión ⛪🕊️\n' +
+                      '👨‍👩‍👧‍👦 Asistiremos: ' + personas + '\n' +
+                      '🎉 ¡Gracias por la invitación!';
+            } else {
+                msg = '¡Hola! 👋 Soy *' + name + '*.\n' +
+                      '😢 Lamentablemente no podré asistir a la Primera Comunión ⛪🕊️\n' +
+                      '🙏 ¡Muchas gracias por la invitación! Les deseo un día muy especial 💛';
+            }
+
+            const url = 'https://wa.me/' + RSVP_PHONE + '?text=' + encodeURIComponent(msg);
+            const w = window.open(url, '_blank');
+            if (!w) { window.location.href = url; }
+            closeRsvp();
+        }
+
+        document.addEventListener('keydown', function (e) {
+            if (e.key === 'Escape') closeRsvp();
+        });
     </script>
 </body>
 </html>
